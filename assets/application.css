@@ -8,4 +8,21 @@
   font-family: "Work Sans", sans-serif;
   color: var(--primary-text-color);
   background: var(--primary-bg);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vh 2vw;
+  padding: 2vw;
+}
+.container .navbar-container .navbar {
+  display: flex;
+}
+.container .navbar-container .navbar .nav-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.container .navbar-container .navbar .nav-item:not(:last-child) .nav-link:hover {
+  color: orangered;
 }/*# sourceMappingURL=application.css.map */

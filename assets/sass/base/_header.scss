@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vh 2vw;
+  padding: 2vw;
+
+  .navbar-container {
+    .navbar {
+      display: flex;
+
+      .nav-item:not(:last-child) {
+        margin-right: 1.5rem;
+        
+        .nav-link:hover {
+          color: orangered;
+        }
+      }
+    }
+  }
+}

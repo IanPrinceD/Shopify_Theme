@@ -1,0 +1,45 @@
+<header class="container">
+  <a href="#" class="container-logo">
+    <img src="#" alt="#" width="auto" height="auto">
+  </a>
+  <nav class="navbar-container">
+    <ul class="navbar">
+      <!-- for each link, displays in the 'main-menu' displays an anchor tag - -->
+      {% for link in linklists['main-menu'].links %}
+        <!-- check if there are submenu - -->
+        {% assign child_list_handle = link.title | handleize %}
+        <!-- if the link has a child, loop for child and displays an anchor tag - -->
+        {% if linklists[child_list_handle].links != blank %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          [
+          {%- for childlink in linklists[child_list_handle].links %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            </li>
+          {% endfor -%}
+          ]
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      <li class="nav-item">
+        <a class="nav-link" href="/cart">cart</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- check if the store is open for account registration or login - -->
+{% if shop.customer_accounts_enabled %}
+  {% if customer %}
+    <a href="/account">account</a>
+    {{ 'log out' | customer_logout_link }}
+  {% else %}
+    {{ 'log in ' | customer_login_link }}
+    {{ 'register' | customer_register_link }}
+  {% endif %}
+{% endif %}
