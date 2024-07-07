@@ -1,0 +1,9 @@
+{
+  "name": "Home page",
+  "sections": {
+    "hero-template": {
+      "type": "hero"
+    }
+  },
+  "order": ["hero-template"]
+}
