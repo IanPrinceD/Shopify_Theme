@@ -2,7 +2,7 @@
   "name": "Home page",
   "sections": {
     "hero-template": {
-      "type": "hero"
+      "type": "hero_section"
     }
   },
   "order": ["hero-template"]
