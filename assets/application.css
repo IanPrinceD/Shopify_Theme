@@ -23,6 +23,6 @@
 .container .navbar-container .navbar .nav-item:not(:last-child) {
   margin-right: 1.5rem;
 }
-.container .navbar-container .navbar .nav-item:not(:last-child) .nav-link:hover {
+.container .navbar-container .navbar .nav-item .nav-link:hover {
   color: orangered;
 }/*# sourceMappingURL=application.css.map */

@@ -9,11 +9,15 @@
     .navbar {
       display: flex;
 
-      .nav-item:not(:last-child) {
-        margin-right: 1.5rem;
-        
-        .nav-link:hover {
-          color: orangered;
+      .nav-item {
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+
+        .nav-link {
+          &:hover {
+            color: orangered;
+          }
         }
       }
     }
