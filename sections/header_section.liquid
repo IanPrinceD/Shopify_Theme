@@ -1,6 +1,11 @@
 <header class="container">
   <a href="#" class="container-logo">
-    <img src="#" alt="#" width="auto" height="auto">
+    <img
+      src="{{ section.settings.image |  image_url}}"
+      alt="#"
+      width="{{ section.settings.image_height }}%"
+      height="{{ section.settings.image_height }}%"
+    >
   </a>
   <nav class="navbar-container">
     <ul class="navbar">
@@ -43,3 +48,41 @@
     {{ 'register' | customer_register_link }}
   {% endif %}
 {% endif %}
+
+{% schema %}
+{
+  "name": "Logo",
+  "class": "hero-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 100,
+      "label": "Image Width (%)"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 100,
+      "label": "Image Height (%)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "category": "hero"
+    }
+  ]
+}
+{% endschema %}
