@@ -232,3 +232,23 @@ theme update
 11. `{% form 'recover_customer_password' %}`
 12. `{% form 'reset_customer_password' %}`
 13. `{% form 'storefront_password' %}`
+
+## 15 Routes Attributes
+1. `routes.root_url`
+2. `routes.account_url`
+3. `routes.account_login_url`
+4. `routes.account_logout_url`
+5. `routes.account_register_url`
+6. `routes.account_addresses_url`
+7. `routes.account_recover_url`
+8. `routes.collections_url`
+9. `routes.all_products_collection_url`
+10. `routes.search_url`
+11. `routes.cart_url`
+12. `routes.cart_add_url`
+13. `routes.cart_change_url`
+14. `routes.cart_clear_url`
+15. `routes.product_recommendations_url`
+
+## Shopify Cheatsheet
+Check this link for the [`Shopify Cheatsheet`](https://www.shopify.com/ph/partners/shopify-cheat-sheet)
