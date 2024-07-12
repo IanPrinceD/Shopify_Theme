@@ -10,20 +10,20 @@
   background: var(--primary-bg);
 }
 
-.container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 3vh 2vw;
   padding: 2vw;
 }
-.container .navbar-container .navbar {
+.header-container .navbar-container .navbar {
   display: flex;
 }
-.container .navbar-container .navbar .nav-item:not(:last-child) {
+.header-container .navbar-container .navbar .nav-item:not(:last-child) {
   margin-right: 1.5rem;
 }
-.container .navbar-container .navbar .nav-item .nav-link:hover {
+.header-container .navbar-container .navbar .nav-item .nav-link:hover {
   color: orangered;
 }
 
