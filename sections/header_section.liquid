@@ -31,23 +31,37 @@
           </li>
         {% endif %}
       {% endfor %}
-      <li class="nav-item">
-        <a class="nav-link" href="/cart">cart</a>
-      </li>
     </ul>
   </nav>
+  <form action="/search" method="GET" role="search">
+    <input type="text" name="q" value="{{ search.terms |  escape }}">
+    <button type="submit" class="btn btn-secondary">Search</button>
+  </form>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-item" href="/cart">Cart</a></li>
+  </ul>
+  <ul class="navbar-nav">
+    <!-- check if the store is open for account registration or login - -->
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ routes.account_url }}">Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ routes.account_logout_url }}">Logout</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ routes.account_login_url }}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ routes.account_register_url }}">Register</a>
+        </li>
+      {% endif %}
+    {% endif %}
+  </ul>
+  
 </header>
-
-<!-- check if the store is open for account registration or login - -->
-{% if shop.customer_accounts_enabled %}
-  {% if customer %}
-    <a href="/account">account</a>
-    {{ 'log out' | customer_logout_link }}
-  {% else %}
-    {{ 'log in ' | customer_login_link }}
-    {{ 'register' | customer_register_link }}
-  {% endif %}
-{% endif %}
 
 {% schema %}
 {
