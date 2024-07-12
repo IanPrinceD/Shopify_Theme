@@ -33,34 +33,39 @@
       {% endfor %}
     </ul>
   </nav>
-  <form action="/search" method="GET" role="search">
-    <input type="text" name="q" value="{{ search.terms |  escape }}">
-    <button type="submit" class="btn btn-secondary">Search</button>
-  </form>
-  <ul class="navbar-nav">
-    <li class="nav-item"><a class="nav-item" href="/cart">Cart</a></li>
-  </ul>
-  <ul class="navbar-nav">
-    <!-- check if the store is open for account registration or login - -->
-    {% if shop.customer_accounts_enabled %}
-      {% if customer %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ routes.account_url }}">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ routes.account_logout_url }}">Logout</a>
-        </li>
-      {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ routes.account_login_url }}">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ routes.account_register_url }}">Register</a>
-        </li>
+  <div class="form-container">
+    <form class="form-wrapper" action="/search" method="GET" role="search">
+      <input type="text" name="q" value="{{ search.terms |  escape }}">
+      <button type="submit" class="btn btn-secondary">Search</button>
+    </form>
+  </div>
+  <div class="cart-container">
+    <ul class="cart-wrapper">
+      <li class="cart-item"><a class="cart-link" href="/cart">Cart</a></li>
+    </ul>
+  </div>
+  <div class="account-container">
+    <ul class="account-wrapper">
+      <!-- check if the store is open for account registration or login - -->
+      {% if shop.customer_accounts_enabled %}
+        {% if customer %}
+          <li class="account-item">
+            <a class="account-link" href="{{ routes.account_url }}">Account</a>
+          </li>
+          <li class="account-item">
+            <a class="account-link" href="{{ routes.account_logout_url }}">Logout</a>
+          </li>
+        {% else %}
+          <li class="account-item">
+            <a class="account-link" href="{{ routes.account_login_url }}">Login</a>
+          </li>
+          <li class="account-item">
+            <a class="account-link" href="{{ routes.account_register_url }}">Register</a>
+          </li>
+        {% endif %}
       {% endif %}
-    {% endif %}
-  </ul>
-  
+    </ul>
+  </div>
 </header>
 
 {% schema %}

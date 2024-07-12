@@ -22,4 +22,16 @@
       }
     }
   }
+
+  .account-container {
+    .account-wrapper {
+      display: flex;
+
+      .account-item {
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
 }
