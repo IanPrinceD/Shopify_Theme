@@ -23,6 +23,20 @@
     }
   }
 
+  .cart-container {
+    .cart-wrapper {
+
+      .cart-item {
+
+        .cart-link{
+          &:hover {
+            color: orangered
+          }
+        }
+      }
+    }
+  }
+
   .account-container {
     .account-wrapper {
       display: flex;
@@ -30,6 +44,12 @@
       .account-item {
         &:not(:last-child) {
           margin-right: 1.5rem;
+        }
+
+        .account-link {
+          &:hover {
+            color: orangered;
+          }
         }
       }
     }

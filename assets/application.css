@@ -26,11 +26,17 @@
 .header-container .navbar-container .navbar .nav-item .nav-link:hover {
   color: orangered;
 }
+.header-container .cart-container .cart-wrapper .cart-item .cart-link:hover {
+  color: orangered;
+}
 .header-container .account-container .account-wrapper {
   display: flex;
 }
 .header-container .account-container .account-wrapper .account-item:not(:last-child) {
   margin-right: 1.5rem;
+}
+.header-container .account-container .account-wrapper .account-item .account-link:hover {
+  color: orangered;
 }
 
 .inner-hero-section {
