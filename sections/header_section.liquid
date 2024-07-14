@@ -1,12 +1,15 @@
 <div class="header-container">
-  <a href="{{ shop.url }}" class="container-logo">
-    <img
-      src="{{ section.settings.image |  image_url}}"
-      alt="#"
-      width="{{ section.settings.logo_size }}%"
-      height="auto"
-    >
-  </a>
+  <div class="logo-container">
+    <a href="{{ shop.url }}" class="logo-wrapper">
+      <img
+        src="{{ section.settings.image |  image_url}}"
+        alt="#"
+        width="{{ section.settings.logo_size }}%"
+        height="auto"
+      >
+    </a>
+  </div>
+
   <nav class="navbar-container">
     <ul class="navbar">
       <!-- for each link, displays in the 'main-menu' displays an anchor tag - -->
