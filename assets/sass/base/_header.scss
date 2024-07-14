@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3vh 2vw;
   padding: 2vw;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 
   .navbar-container {
     .navbar {
@@ -23,14 +25,36 @@
     }
   }
 
+  .form-container {
+    .form-wrapper {
+      .form-holder {
+        border: 1px solid black;
+        border-radius: 0.5rem;
+
+        .form-text {
+          border: none;
+          outline: none;
+          margin: 0.5rem;
+        }
+
+        .button-btn {
+          border: none;
+          outline: none;
+          border-radius: 0 0.5rem 0.5rem 0;
+          background-color: orangered;
+          padding: 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   .cart-container {
     .cart-wrapper {
-
       .cart-item {
-
-        .cart-link{
+        .cart-link {
           &:hover {
-            color: orangered
+            color: orangered;
           }
         }
       }

@@ -6,16 +6,17 @@
   list-style: none;
   scroll-behavior: smooth;
   font-family: "Work Sans", sans-serif;
-  color: var(--primary-text-color);
-  background: var(--primary-bg);
+  color: #000;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3vh 2vw;
   padding: 2vw;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
 .header-container .navbar-container .navbar {
   display: flex;
@@ -25,6 +26,23 @@
 }
 .header-container .navbar-container .navbar .nav-item .nav-link:hover {
   color: orangered;
+}
+.header-container .form-container .form-wrapper .form-holder {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+.header-container .form-container .form-wrapper .form-holder .form-text {
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+}
+.header-container .form-container .form-wrapper .form-holder .button-btn {
+  border: none;
+  outline: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: orangered;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 .header-container .cart-container .cart-wrapper .cart-item .cart-link:hover {
   color: orangered;

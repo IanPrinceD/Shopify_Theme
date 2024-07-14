@@ -1,4 +1,4 @@
-<header class="header-container">
+<div class="header-container">
   <a href="{{ shop.url }}" class="container-logo">
     <img
       src="{{ section.settings.image |  image_url}}"
@@ -35,8 +35,10 @@
   </nav>
   <div class="form-container">
     <form class="form-wrapper" action="/search" method="GET" role="search">
-      <input type="text" name="q" value="{{ search.terms |  escape }}">
-      <button type="submit" class="btn btn-secondary">Search</button>
+      <div class="form-holder">
+        <input class="form-text" type="text" name="q" value="{{ search.terms |  escape }}">
+        <button type="submit" class="button-btn">Search</button>
+      </div>
     </form>
   </div>
   <div class="cart-container">
@@ -66,7 +68,7 @@
       {% endif %}
     </ul>
   </div>
-</header>
+</div>
 
 {% schema %}
 {
