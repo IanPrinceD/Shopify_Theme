@@ -28,6 +28,9 @@
   .form-container {
     .form-wrapper {
       .form-holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid black;
         border-radius: 0.5rem;
 
