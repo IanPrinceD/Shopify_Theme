@@ -251,4 +251,7 @@ theme update
 15. `routes.product_recommendations_url`
 
 ## Shopify Cheatsheet
-Check this link for the [`Shopify Cheatsheet`](https://www.shopify.com/ph/partners/shopify-cheat-sheet)
+Check this link for the
+
+- [`Shopify Cheatsheet`](https://www.shopify.com/ph/partners/shopify-cheat-sheet)
+- [`Shopify Cheatsheet`](https://cheat.markdunkley.com/) by markdunkley
