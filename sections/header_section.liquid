@@ -1,14 +1,17 @@
 <div class="header-container">
-  <div class="logo-container">
-    <a href="{{ shop.url }}" class="logo-wrapper">
-      <img
-        src="{{ section.settings.image |  image_url}}"
-        alt="#"
-        width="{{ section.settings.logo_size }}%"
-        height="auto"
-      >
-    </a>
-  </div>
+  {% assign logo = section.settings.image %}
+  {% if logo != blank %}
+    <div class="logo-container">
+      <a href="{{ shop.url }}" class="logo-wrapper">
+        <img
+          src="{{ logo |  image_url}}"
+          alt="#"
+          width="{{ section.settings.logo_size }}%"
+          height="auto"
+        >
+      </a>
+    </div>
+  {% endif %}
 
   <nav class="navbar-container">
     <ul class="navbar">
