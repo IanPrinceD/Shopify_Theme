@@ -6,5 +6,44 @@
     "theme_author": "Ian Prince D.",
     "theme_documentation_url": "https://github.com/Shopify/themekit",
     "theme_support_url": "https://github.com/Shopify/themekit/issues"
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading Font Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "header_font",
+        "label": "Header Font Styles",
+        "default": "mono"
+      },
+      {
+        "type": "header",
+        "content": "Body Font Styles"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font Styles",
+        "default": "mono"
+      },
+      {
+        "type": "header",
+        "content": "Body Font Size"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Body Font Size",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 13
+      }
+    ]
   }
 ]
