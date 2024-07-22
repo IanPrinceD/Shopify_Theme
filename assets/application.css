@@ -90,4 +90,26 @@
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
+}
+
+.product-container .product-wrapper .product-text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-block: 1rem;
+}
+.product-container .product-wrapper .cards-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Create a responsive grid */
+  gap: 0.5rem;
+  place-content: center; /* Center the grid within its container */
+}
+.product-container .product-wrapper .cards-holder .card-holder {
+  max-width: 15rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #c8c8c8;
+  border-radius: 0.5rem;
+}
+.product-container .product-wrapper .cards-holder .card-holder .card-container .card-image {
+  max-width: 100%;
 }/*# sourceMappingURL=application.css.map */
